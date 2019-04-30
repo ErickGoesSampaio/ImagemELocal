@@ -1,0 +1,21 @@
+/**/
+
+.jumbotron{
+  background-color: gray;
+  height: 270px;
+}
+body{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h3{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color:red;
+}
+h4{
+  font-weight: bolder;
+  color:red;
+}
