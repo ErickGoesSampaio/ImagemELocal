@@ -6,9 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
 
+  <!-- Link da API -->
+  <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
 	<script src="components/loader.js"></script>
 	<script src="js/jquery-3.4.0.min.js"></script>
 	<script src="css/bootstrap.min.css"></script>
+  <script src="components/acao.js"></script>
+  <script src="js/acao.js"></script>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="components/loader.css">
@@ -28,33 +34,43 @@
 				<hr>
 			</div>
 		</div>
+
+    <!-- Botão Camera -->
 		<div class="row">
 			<div class="col-xs-12">
-				<button class="btn btn-danger btn-block btn-lg" id="btn_camera">Camera</button>
+				<button class="btn btn-danger btn-block btn-lg" id="camera" onclick="funciona()">Camera</button>
 			</div>
 		</div>
-    <!-- Foto -->
-    <div class="class">
-      
-      <hr/>
-    </div>
-    <!-- Fim da Foto -->
-		<!-- Moldura -->
-    <div class="jumbotron">
-			<!-- Mapa-->
 
-		</div>
+    <!-- Foto -->
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="" alt="" class="img-responsive" id="imagem" onclick="funciona()">
+        <hr/>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="jumbotron">
+          <div id="map" style="width: 100%; height: 200px;" disabled="disabled" onclick="funciona()"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Latitude & Longitude -->
 		<div class="row">
 			<div class="col-xs-3">
-
 					<h4>Longitude</h4>
-					<input type="text"  disabled="disabled" name="longitude"><br>
+					<input type="text"  disabled="disabled" id="longitude" onclick="funciona()"><br>
 
-				<h4>Latitude:</h4>
-				<input type="text" class="latitude" disabled="disabled" name="latitude">
+          <h4>Latitude:</h4>
+          <input type="text" disabled="disabled" id="latitude" onclick="funciona()">
 			</div>
 		</div>
-	</div>
+
+	</div> <!-- Container -->
 </body>
 
 </html>
